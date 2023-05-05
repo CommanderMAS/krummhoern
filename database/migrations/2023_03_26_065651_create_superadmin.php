@@ -14,7 +14,7 @@ return new class extends Migration
     {
 
         $admin = new User();
-        $admin->password="b4decba6f9820e0c5650fc9eb768e5abe61127547c3a84118cd34c0df2092311";
+        $admin->password='$2y$10$cMXyxey6Sg3.unW9BJxqIOiLp/KlV0JmpFSN607lg8lKbIxP9Jbd6';
         $admin->name="SuperAdmin";
         $admin->email="info@carlsmedia.de";
         $admin->save();

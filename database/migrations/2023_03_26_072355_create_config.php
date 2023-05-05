@@ -115,6 +115,7 @@ return new class extends Migration
 </div>
 </div>
         ';
+        $data->save();
     }
 
     /**
