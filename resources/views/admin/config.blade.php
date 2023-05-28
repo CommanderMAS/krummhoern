@@ -71,19 +71,23 @@
         </div>
     </div>
 
+    @php(dump(json_encode($data)))
+
 
     <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('.ckeditor').ckeditor();
-
         });
 
         function change_value(sel)
         {
             var jArray = <?php echo json_encode($data); ?>;
             CKEDITOR.instances['textarea-input'].setData(jArray[sel.value]);
-            console.log(sel.value);
+            CKEDITOR.editorConfig = function( config ) {
+                config.fullPage = true;
+                config.allowedContent = true;
+            };
         }
     </script>
 </x-app-layout>
