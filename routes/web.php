@@ -8,6 +8,7 @@ use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ImportController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjekteController;
+use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,10 +21,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/home', function () {
     return view('welcome');
@@ -43,6 +40,8 @@ Route::get('/satzung', [FrontendController::class, 'satzung'])->name('satzung');
 Route::get('/beitraege', [FrontendController::class, 'beitraege'])->name('beitraege');
 Route::get('/infoflyer', [FrontendController::class, 'infoflyer'])->name('infoflyer');
 Route::get('/buchreihe', [FrontendController::class, 'buchreihe'])->name('buchreihe');
+Route::get('/impressum', [FrontendController::class, 'impressum'])->name('impressum');
+Route::get('/datenschutz', [FrontendController::class, 'datenschutz'])->name('datenschutz');
 Route::get('/link', [FrontendController::class, 'link'])->name('link');
 
 Route::get('/dashboard', [ChangesController::class, 'view'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -73,6 +72,12 @@ Route::get('/admin/projekte/{id}/edit', [ProjekteController::class, 'news_edit']
 Route::put('/admin/projekte/{id}/update', [ProjekteController::class, 'news_update'])->middleware(['auth', 'verified'])->name('projekte_update');
 Route::delete('/admin/projekte/{id}/delete', [ProjekteController::class, 'news_delete'])->middleware(['auth', 'verified'])->name('projekte_delete');
 
+//Slider
+Route::get('/admin/slider', [SliderController::class, 'news_index'])->middleware(['auth', 'verified'])->name('slider_index');
+Route::get('/admin/slider/new', [SliderController::class, 'news_create'])->middleware(['auth', 'verified'])->name('slider_create');
+Route::put('/admin/slider/new', [SliderController::class, 'news_store'])->middleware(['auth', 'verified'])->name('slider_store');
+Route::delete('/admin/slider/{id}/delete', [SliderController::class, 'news_delete'])->middleware(['auth', 'verified'])->name('slider_delete');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -89,4 +94,9 @@ Route::get('/{any}', function () {
 Route::get('admin/{any}', function () {
     return view('welcome');
 })->name('any.any');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
 

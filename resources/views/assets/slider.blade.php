@@ -4,20 +4,17 @@
 
         <div class="carousel-inner" role="listbox">
 
-            <!-- Slide 1 -->
-            <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+            @foreach(get_sliders() as $key=>$slider)
+                @if ($key === 0)
+                    <div class="carousel-item active" style="background-image: url({{$slider}});">
 
-            </div>
+                    </div>
+                @else
+                    <div class="carousel-item" style="background-image: url({{$slider}});">
 
-            <!-- Slide 2 -->
-            <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
-
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
-
-            </div>
+                    </div>
+                @endif
+            @endforeach
 
         </div>
 

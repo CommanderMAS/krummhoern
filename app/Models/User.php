@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -43,6 +44,13 @@ class User extends Authenticatable
     ];
 
     public function get_right(){
-        return $this->hasOne(User_Rights::class, 'id_user', 'id')->first();
+        $right = $this->hasOne(User_Rights::class, 'id_user', 'id')->first();
+        if ($right === null){
+            $right = new User_Rights();
+            $right->id_user = Auth::id();
+            $right->name = 'User';
+            $right->power = 1;
+        }
+        return $right;
     }
 }

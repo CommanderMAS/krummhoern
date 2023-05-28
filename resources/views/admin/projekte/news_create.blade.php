@@ -1,16 +1,16 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-800 leading-tight">
             {{ __('Datenänderung') }}
         </h2>
     </x-slot>
 
-    <form method="POST" action="{{ url('/admin/projekte/new') }}" enctype='multipart/form-data'>
+    <form method="POST" action="{{ url('//projekte/new') }}" enctype='multipart/form-data'>
         @csrf
         @method('PUT')
 
 
-        <section id="projekte" class="text-white">
+        <section id="projekte" class="te">
             <div class="container">
 
                 <div class="col-md-12 row form-group">
@@ -91,7 +91,7 @@
                             </div>
 
                             <div class="col-md-12 row form-group float-right">
-                                <button type="submit" class="btn btn-primary btn-sm">
+                                <button type="submit" class="btn btn-info btn-sm">
                                     <i class="fa fa-dot-circle-o"></i> Speichern
                                 </button>
                             </div>

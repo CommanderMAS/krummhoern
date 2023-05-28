@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 
@@ -15,7 +14,9 @@
     <link href="../resources/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="{{URL::asset('../resources/css/animate.min.css')}}" rel="stylesheet">
@@ -38,7 +39,8 @@
 <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:#">verwaltung@deichacht-kruemmhoern.de</a></i>
+            <i class="bi bi-envelope d-flex align-items-center"><a
+                    href="mailto:#">verwaltung@deichacht-kruemmhoern.de</a></i>
             <i class="bi bi-phone d-flex align-items-center ms-4"><span>0 49 23 - 91 11 0</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
@@ -53,7 +55,8 @@
     <div class="container d-flex justify-content-between">
 
         <div class="logo">
-            <h1 class="text-light"><a href="{{route('home')}}"><img src="{{asset('assets/img/logo.jpg')}}" alt="logo"></a></h1>
+            <h1 class="text-light"><a href="{{route('home')}}"><img src="{{asset('assets/img/logo.jpg')}}"
+                                                                    alt="logo"></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
@@ -70,7 +73,7 @@
                     </ul>
                 </li>
                 @if (count_projekte()>0)
-                <li><a href="{{route('projekte')}}">Projekte</a></li>
+                    <li><a href="{{route('projekte')}}">Projekte</a></li>
                 @endif
                 <li><a href="{{route('beitraege')}}">Beiträge</a></li>
                 <li><a href="{{route('anfahrt')}}">Anfahrt & Kontakt</a></li>
@@ -82,9 +85,13 @@
                     </ul>
                 </li>
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zum Bearbeitungsbereich</a>
+                    <a href="{{ url('/dashboard') }}"
+                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zum
+                        Bearbeitungsbereich</a>
                 @else
-                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                    <a href="{{ route('login') }}"
+                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
+                        in</a>
 
                 @endauth
             </ul>
@@ -95,13 +102,11 @@
 </header><!-- End Header -->
 
 
-
 <main id="main">
 
     <!-- ======= Cta Section ======= -->
 
     @yield('content')
-
 
 
 </main><!-- End #main -->
@@ -110,17 +115,21 @@
 <footer id="footer">
 
     <div class="container d-md-flex py-4">
-
-        <div class="me-md-auto text-center text-md-start">
-            <div class="copyright">
-                © <strong><span>Deichacht Krummhörn</span></strong>. Alle Rechte vorbehalten | Programmierung <a href="https://carlsmedia.de" target="_blank">carlsmedia web- und grafikdesign</a>
+        <div class="">
+            <div class="me-md-auto copyright text-md-start">
+                © <strong><span>Deichacht Krummhörn</span></strong>. Alle Rechte vorbehalten | Programmierung <a
+                    href="https://carlsmedia.de" target="_blank">carlsmedia web- und grafikdesign</a>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                <a href="{{route('impressum')}}" target="_self">Impressum</a>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                <a href="{{route('datenschutz')}}" target="_self">Datenschutz</a>
             </div>
-
         </div>
     </div>
 </footer><!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/aos/aos.js"></script>

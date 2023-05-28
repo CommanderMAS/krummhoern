@@ -4,7 +4,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\projekte;
+use App\Models\Projekte;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,10 +17,10 @@ class projekteController
     {
         if (Auth::user()->get_right()->name==='Admin'){
             if ($request->get("suche") == null) {
-                $projekte = projekte::query()->where('active', 1)->get();
+                $projekte = Projekte::query()->where('active', 1)->get();
             } else {
-                $projekte = projekte::query()->where('active', 1)->where('title', 'like', "%" . $request->get("suche") . "%")->get();
-                $projekte2 = projekte::query()->where('active', 1)->where('intro', 'like', "%" . $request->get("suche") . "%")->get();
+                $projekte = Projekte::query()->where('active', 1)->where('title', 'like', "%" . $request->get("suche") . "%")->get();
+                $projekte2 = Projekte::query()->where('active', 1)->where('intro', 'like', "%" . $request->get("suche") . "%")->get();
                 foreach ($projekte2 as $u) {
                     $projekte->concat($u);
                 }
@@ -98,7 +98,7 @@ class projekteController
     public function news_edit($id)
     {
         if (Auth::user()->get_right()->name==='Admin'){
-            $projekte = projekte::query()->where('id', $id)->first();
+            $projekte = Projekte::query()->where('id', $id)->first();
             return view('admin.projekte.news_edit', ['news' => $projekte]);
         }
 
@@ -108,7 +108,7 @@ class projekteController
     public function news_update(Request $request, int $id)
     {
         if (Auth::user()->get_right()->name==='Admin'){
-            $projekte = projekte::query()->where('id', $id)->first();
+            $projekte = Projekte::query()->where('id', $id)->first();
             $alt_image = $projekte->image;
             $projekte->fill($request->all());
             $test = $request->get('topnews');
@@ -140,7 +140,7 @@ class projekteController
     public function news_delete($id)
     {
         if (Auth::user()->get_right()->name==='Admin'){
-            $projekte = projekte::query()->where('id', $id)->first();
+            $projekte = Projekte::query()->where('id', $id)->first();
             $projekte->active = 0;
             $projekte->save();
             return redirect()->route('projekte_index');

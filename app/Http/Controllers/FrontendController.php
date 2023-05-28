@@ -68,7 +68,15 @@ class FrontendController
 
     public function organisation()
     {
-        return view('statisch.organisation');
+        $data['ausschuss']=Config::query()->where('option','ausschuss')->value('value');
+        $data['vorstand']=Config::query()->where('option','vorstand')->value('value');
+        $data['vorstand_personen']=Config::query()->where('option','vorstand_personen')->value('value');
+        $data['verwaltung']=Config::query()->where('option','verwaltung')->value('value');
+        $data['bezirk_1']=Config::query()->where('option','bezirk_1')->value('value');
+        $data['bezirk_2']=Config::query()->where('option','bezirk_2')->value('value');
+        $data['bezirk_3']=Config::query()->where('option','bezirk_3')->value('value');
+
+        return view('statisch.organisation',['data'=>$data]);
     }
 
     public function anfahrt()
@@ -78,12 +86,27 @@ class FrontendController
 
     public function aufgaben()
     {
-        return view('statisch.aufgaben');
+        $data['aufgaben_oben']=Config::query()->where('option','aufgaben_oben')->value('value');
+        $data['deichschaefereien']=Config::query()->where('option','deichschaefereien')->value('value');
+        $data['deichunterhaltung']=Config::query()->where('option','deichunterhaltung')->value('value');
+        $data['katastrophenschutz']=Config::query()->where('option','katastrophenschutz')->value('value');
+
+        return view('statisch.aufgaben',['data'=>$data]);
     }
 
     public function verbandsgebiet()
     {
         return view('statisch.verbandsgebiet');
+    }
+
+    public function impressum()
+    {
+        return view('statisch.impressum');
+    }
+
+    public function datenschutz()
+    {
+        return view('statisch.datenschutz');
     }
 
     public function satzung()
@@ -106,11 +129,19 @@ class FrontendController
 
     public function buchreihe()
     {
-        return view('statisch.buchreihe');
+        $input = 'buchreihe';
+        $content = Config::query()->where('option', $input)->first();
+
+        $content = $content->value;
+        return view('statisch.'.$input,['content'=>$content]);
     }
 
     public function link()
     {
-        return view('statisch.links');
+        $input = 'links';
+        $content = Config::query()->where('option', $input)->first();
+
+        $content = $content->value;
+        return view('statisch.'.$input,['content'=>$content]);
     }
 }

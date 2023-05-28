@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-800 leading-tight">
             {{ __('Alle Aktuelles-Einträge') }}
         </h2>
     </x-slot>
@@ -8,9 +8,9 @@
 
     <div class="py-12" style="color:white">
         <div class="max-w-7xl mx-auto">
-            <div class="dark:bg-gray-800 shadow-sm sm:rounded-lg">
-                <div class="row text-white align-content-center">
-                    <a href="{{ url('admin/aktuelles/new') }}" class="btn btn-primary mx-auto w-75">Neuen Aktuelles-Eintrag
+            <div class="dark:bg-gray-100 shadow-sm sm:rounded-lg">
+                <div class="row  align-content-center">
+                    <a href="{{ url('admin/aktuelles/new') }}" class="btn btn-info mx-auto w-75">Neuen Aktuelles-Eintrag
                         erstellen</a>
 
                 </div>
@@ -20,7 +20,7 @@
                         <table id="bootstrap-data-table"
                                class="table table-active" role="grid"
                                aria-describedby="bootstrap-data-table_info">
-                            <thead class="text-white-50">
+                            <thead class="-50">
                             <tr role="row">
                                 <th tabindex="0" rowspan="1" colspan="1"
                                     style="width: 337px;">Überschrift
@@ -49,7 +49,7 @@
                                 </th>
                             </tr>
                             </thead>
-                            <tbody class="text-white">
+                            <tbody class="">
                             @php($row=1)
                             @foreach ($news as $info)
                                 <tr role="row" class="{{$row++ % 2 == 0?"even":"odd"}}">
