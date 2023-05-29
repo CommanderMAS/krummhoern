@@ -22,7 +22,7 @@ class ChangesController
     public function save(Request $request)
     {
         $message = 'Daten erfolgreich gespeichert';
-        $messageColor = 'green';
+        $messageColor = 'darkgreen';
         $changes = new User_Changes($request->all());
         $attributes = $changes->getAttributes();
         foreach ($attributes as $key => $change){

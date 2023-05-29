@@ -16,11 +16,11 @@ class ImportController
 
         $message="Import läuft bereits, bitte warten...";
         $messageColor='yellow';
-        $filename = storage_path()."\import\import.txt";
+        $filename = storage_path()."/import/import.txt";
         if (file_exists($filename)){
             return view('admin.import',['message'=>$message,'messageColor'=>$messageColor, 'import'=>true]);
         }
-        $saveFile = storage_path()."\import\save.txt";
+        $saveFile = storage_path()."/import/save.txt";
         if (file_exists($saveFile)){
             $saveFileContent = (int)file_get_contents($saveFile);
             $message=$saveFileContent." User erfolgreich importiert";
@@ -33,13 +33,13 @@ class ImportController
 
     public function execute(Request $request) {
 
-        if (!is_dir(storage_path().'\import')){
-            mkdir(storage_path().'\import');
+        if (!is_dir(storage_path().'/import')){
+            mkdir(storage_path().'/import');
         }
 
         $message="Import läuft bereits, bitte warten...";
         $messageColor='yellow';
-        $filename = storage_path()."\import\import.txt";
+        $filename = storage_path()."/import/import.txt";
         if (file_exists($filename)){
             return view('admin.import',['message'=>$message,'messageColor'=>$messageColor, 'import'=>true]);
         }
@@ -54,7 +54,7 @@ class ImportController
         file_put_contents($filename,$fileContent);
 
 
-        $saveFile = storage_path()."\import\save.txt";
+        $saveFile = storage_path()."/import/save.txt";
         file_put_contents($saveFile,"1");
 
         $message="Upload abgeschlossen - Import läuft";
@@ -64,11 +64,11 @@ class ImportController
     }
 
     public function import(){
-        $filename = storage_path()."\import\import.txt";
+        $filename = storage_path()."/import/import.txt";
         if (!file_exists($filename)){
             return;
         }
-        $saveFile = storage_path()."\import\save.txt";
+        $saveFile = storage_path()."/import/save.txt";
         $saveFileContent = (int)file_get_contents($saveFile);
 
         Log::info('Sind bei User: '.$saveFileContent);

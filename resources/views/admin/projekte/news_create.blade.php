@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <form method="POST" action="{{ url('//projekte/new') }}" enctype='multipart/form-data'>
+    <form method="POST" action="{{ url('/admin/projekte/new') }}" enctype='multipart/form-data'>
         @csrf
         @method('PUT')
 

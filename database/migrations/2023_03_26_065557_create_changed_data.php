@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+return new class extends Migrationm
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ return new class extends Migration
     {
         Schema::create('changed_data', function (Blueprint $table) {
             $table->id();
-            $table->text('hebenummer',255);
-            $table->text('name',255)->nullable()->default('null');
-            $table->text('vorname',255)->nullable()->default('null');
-            $table->text('nachname',255)->nullable()->default('null');
-            $table->text('email',255);
-            $table->text('strasse',255)->nullable()->default('null');
-            $table->text('plz',255)->nullable()->default('null');
-            $table->text('ort',255)->nullable()->default('null');
-            $table->text('iban',255)->nullable()->default('null');
-            $table->text('kontoinhaber',255)->nullable()->default('null');
-            $table->text('einzug',255)->nullable()->default('null');
-            $table->text('sonstiges',255)->nullable()->default('null');
+            $table->char('hebenummer',25);
+            $table->char('name',255);
+            $table->char('vorname',255)->nullable()->default('null');
+            $table->char('nachname',255)->nullable()->default('null');
+            $table->char('email',255);
+            $table->char('strasse',255)->nullable()->default('null');
+            $table->char('plz',10)->nullable()->default('null');
+            $table->char('ort',100)->nullable()->default('null');
+            $table->char('iban',100)->nullable()->default('null');
+            $table->char('kontoinhaber',255)->nullable()->default('null');
+            $table->char('einzug',255)->nullable()->default('null');
+            $table->char('sonstiges',255)->nullable()->default('null');
             $table->timestamps();
         });
     }

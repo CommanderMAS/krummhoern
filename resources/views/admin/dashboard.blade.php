@@ -26,8 +26,8 @@
                         Sie haben bereits {{count($dataMessage)}} Mal Änderungen gespeichert. Zuletzt
                         am {{date('d.m.Y',date_timestamp_get($dataMessage[0]['created_at']))}}<br/>
                         Letzte Daten: IBAN <span
-                            style="color:yellow"> {{Crypt::decrypt($dataMessage[0]['iban'])}}</span> Sonstiges <span
-                            style="color:yellow">{{Crypt::decrypt($dataMessage[0]['email'])}}</span>
+                            style="color:blue"> {{Crypt::decrypt($dataMessage[0]['iban'])}}</span> Sonstiges <span
+                            style="color:blue">{{Crypt::decrypt($dataMessage[0]['email'])}}</span>
                     </div>
                 </div>
             </div>

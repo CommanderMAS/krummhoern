@@ -15,7 +15,7 @@
 
                             <div class="ce_text first block">
 
-                                <h1>Anfahrtsbeschreibung</h1>
+                                <h1>Kontakt</h1>
 
 
                                 <p>&nbsp; &nbsp;</p>
@@ -24,7 +24,13 @@
                             </div>
 
                             <br><br>
-                            <table class="warpper" width="100%" border="0">
+                            <div>
+                                Deichacht Krummhörn<br>
+                                Jannes-Ohling-Str. 23<br>
+                                26736 Krummhörn
+
+                            </div>
+                            <!--<table class="warpper" width="100%" border="0">
                                 <tbody>
                                 <tr>
                                     <td valign="top">
@@ -39,7 +45,7 @@
                                     </td>
                                 </tr>
                                 </tbody>
-                            </table>
+                            </table>-->
                             <br><br>
 
 
