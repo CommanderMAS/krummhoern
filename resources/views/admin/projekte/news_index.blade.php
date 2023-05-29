@@ -62,7 +62,7 @@
                                     <td class="text-center">
                                         <form action="{{route('projekte_delete', $info->id)}}" method="post">
                                             <a class="btn btn-info"
-                                               href="{{url('/projekte/'.$info->id.'/edit')}}">
+                                               href="{{url('admin/projekte/'.$info->id.'/edit')}}">
                                                 <span class="ti-marker-alt">Bearbeiten</span></a>
                                             <input type="hidden" name="_method" value="DELETE">
                                             @csrf
