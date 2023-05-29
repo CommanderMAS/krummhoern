@@ -37,6 +37,12 @@ return new class extends Migration
         $rights->name="Admin";
         $rights->power=1;
         $rights->save();
+
+        $rights = new User_Rights();
+        $rights->id_user=2;
+        $rights->name="Admin";
+        $rights->power=1;
+        $rights->save();
     }
 
     /**
