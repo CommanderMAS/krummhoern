@@ -12,7 +12,7 @@
 
                         <div class="mod_article first last block" id="beitraege">
 
-                            {!! $data['beitrag'] !!}
+                            {!! $beitrag !!}
 
                             </div>
 
