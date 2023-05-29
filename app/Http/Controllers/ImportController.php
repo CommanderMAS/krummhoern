@@ -56,6 +56,7 @@ class ImportController
 
         $saveFile = storage_path()."/import/save.txt";
         file_put_contents($saveFile,"1");
+        $this->deleteOld();
 
         $message="Upload abgeschlossen - Import läuft";
         $messageColor='green';
@@ -74,7 +75,6 @@ class ImportController
         Log::info('Sind bei User: '.$saveFileContent);
 
         $fileContent = file_get_contents($filename);
-        $this->deleteOld();
 
         $fileArray = explode (PHP_EOL,$fileContent);
         unset($fileArray[0]);
