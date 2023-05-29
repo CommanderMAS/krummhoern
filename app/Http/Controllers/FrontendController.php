@@ -90,7 +90,6 @@ class FrontendController
         $data['deichschaefereien']=Config::query()->where('option','deichschaefereien')->value('value');
         $data['deichunterhaltung']=Config::query()->where('option','deichunterhaltung')->value('value');
         $data['katastrophenschutz']=Config::query()->where('option','katastrophenschutz')->value('value');
-
         return view('statisch.aufgaben',['data'=>$data]);
     }
 

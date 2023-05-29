@@ -14,6 +14,8 @@
 
                             {!! $beitrag !!}
 
+                            <p>Hier die <a href="{{asset('/downloads/Abbuchungsvollmacht.pdf')}}" target="_blank">Abbuchungsvollmacht</a> herunterladen</p>
+
                             </div>
 
 

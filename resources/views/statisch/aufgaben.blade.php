@@ -39,8 +39,8 @@
 
                                             <h1>Deichschäfereien</h1>
 
-                                            {!! $data['deichschaefereien'] !!}
 
+                                            {!! $data['deichschaefereien'] !!}
 
 
                                         </div>
@@ -48,7 +48,7 @@
 
                                     </div>
                                 </div>
-                                <div class="warpper panel" id="two-panel">
+                                <div class="panel" id="two-panel">
                                     <div class="" id="deichunterhaltung">
 
 
