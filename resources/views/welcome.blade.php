@@ -4,13 +4,13 @@
 
     @include('assets.slider')
 
-    <section id="cta" class="cta">
+    <section id="cta" class="cta blog">
         <div class="container">
 
-            <div class="row">
+            <div class="row entry entry-single">
                 <div class="col-lg-9 text-center text-lg-left">
-                    <h3>Prüfen Sie jetzt, ob Ihre Daten noch korrekt sind.</h3>
-                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3>Aktualisieren sie jetzt ihre Daten</h3>
+                    <p>Loggen sie sich mit den ihnen zugeschickten Zugangsdaten ein und teilen sie uns wichtige Datenänderungen mit</p>
                 </div>
                 <div class="col-lg-3 cta-btn-container text-center">
                     @if (Route::has('login'))
