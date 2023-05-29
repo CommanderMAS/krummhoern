@@ -15,7 +15,7 @@ class ImportController
 
 
         $message="Import läuft bereits, bitte warten...";
-        $messageColor='yellow';
+        $messageColor='green';
         $filename = storage_path()."/import/import.txt";
         if (file_exists($filename)){
             return view('admin.import',['message'=>$message,'messageColor'=>$messageColor, 'import'=>true]);
@@ -38,7 +38,7 @@ class ImportController
         }
 
         $message="Import läuft bereits, bitte warten...";
-        $messageColor='yellow';
+        $messageColor='green';
         $filename = storage_path()."/import/import.txt";
         if (file_exists($filename)){
             return view('admin.import',['message'=>$message,'messageColor'=>$messageColor, 'import'=>true]);
