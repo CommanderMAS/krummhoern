@@ -27,7 +27,7 @@
                                     @php
                                         setlocale(LC_TIME, 'German');
                                         $dt=\Carbon\Carbon::parse($news['createdate']);
-                                        echo $dt->formatLocalized("%A, %d. %B %Y, %H:%M")
+                                        echo $dt->formatLocalized('%d.%m.%Y, %H:%M')
                                     @endphp
                                 </li>
                             </ul>

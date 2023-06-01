@@ -12,7 +12,7 @@ function date_german($date): string
     function count_projekte(): int
     {
         $today = today()->format('Y-m-d');
-        $projekte = Projekte::query()->where('date_to', '>=', $today)->where('active',1)->get();
+        $projekte = Projekte::query()->where('date_to', '>=', $today)->orWhere('date_to',null)->where('active',1)->get();
         return count($projekte);
     }
 

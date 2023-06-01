@@ -36,7 +36,7 @@
                                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> @php
                                         setlocale(LC_TIME, 'German');
                                         $dt=\Carbon\Carbon::parse($row['createdate']);
-                                        echo $dt->formatLocalized("%A, %d. %B %Y, %H:%M")
+                                        echo $dt->formatLocalized('%d.%m.%Y, %H:%M')
                                     @endphp</li>
                             </ul>
                         </div>
