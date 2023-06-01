@@ -86,13 +86,17 @@ class ImportController
                 continue;
             }
             $importParts = explode(",",$import);
-            $user = new User();
-            $name = str_replace(["'","("],"",$importParts[0]);
-            $user->name = $name;
-            $user->email = $name;
-            $password = str_replace(["'",")"],"",$importParts[1]);
-            $user->password =  Hash::make($password);
-            $user->save();
+            $name = str_replace(["'", "("], "", $importParts[0]);
+            $usertry = User::query()->where('name',$name)->first();
+            if ($usertry === null)
+            {
+                $user = new User();
+                $user->name = $name;
+                $user->email = $name;
+                $password = str_replace(["'", ")"], "", $importParts[1]);
+                $user->password = Hash::make($password);
+                $user->save();
+            }
             $saveFileContent++;
             file_put_contents($saveFile,$saveFileContent);
         }

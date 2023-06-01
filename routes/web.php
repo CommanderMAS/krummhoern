@@ -40,6 +40,7 @@ Route::get('/satzung', [FrontendController::class, 'satzung'])->name('satzung');
 Route::get('/beitraege', [FrontendController::class, 'beitraege'])->name('beitraege');
 Route::get('/infoflyer', [FrontendController::class, 'infoflyer'])->name('infoflyer');
 Route::get('/buchreihe', [FrontendController::class, 'buchreihe'])->name('buchreihe');
+Route::get('/hundeamdeich', [FrontendController::class, 'hundeamdeich'])->name('hundeamdeich');
 Route::get('/impressum', [FrontendController::class, 'impressum'])->name('impressum');
 Route::get('/datenschutz', [FrontendController::class, 'datenschutz'])->name('datenschutz');
 Route::get('/link', [FrontendController::class, 'link'])->name('link');

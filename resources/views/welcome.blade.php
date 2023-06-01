@@ -5,6 +5,31 @@
     @include('assets.slider')
 
     <section id="cta" class="cta blog">
+
+        <div class="container">
+
+            <div class="row entry entry-single">
+                <div class="col-lg-12 text-center">
+                    <h1>
+                        Willkommen!
+                    </h1>
+                    <h3>
+                        Liebe Besucher unserer Homepage,
+                    </h3>
+                    <p>
+
+
+                        auf den folgenden Seiten möchten wir uns Ihnen vorstellen und Ihnen unsere Aufgaben im Küstenschutz näherbringen.
+                        Wir wünschen Ihnen viel Spaß beim Durchstöbern unserer Internetpräsenz und stehen Ihnen für Anregungen, Fragen und Wünsche jederzeit gerne zur Verfügung.
+                        Gerd-Udo Heikens, Oberdeichrichter
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        @include('assets.startservices')
         <div class="container">
 
             <div class="row entry entry-single">
@@ -32,6 +57,5 @@
         </div>
     </section><!-- End Cta Section -->
 
-    @include('assets.services')
 
 @endsection

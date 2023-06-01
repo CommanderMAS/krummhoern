@@ -70,13 +70,14 @@
                         <li><a href="{{route('aufgaben')}}">Aufgaben</a></li>
                         <li><a href="{{route('verbandsgebiet')}}">Verbandsgebiet</a></li>
                         <li><a href="{{route('satzung')}}">Satzung</a></li>
+                        <li><a href="{{route('hundeamdeich')}}">Hunde am Deich</a></li>
                     </ul>
                 </li>
                 @if (count_projekte()>0)
                     <li><a href="{{route('projekte')}}">Projekte</a></li>
                 @endif
                 <li><a href="{{route('beitraege')}}">Beiträge</a></li>
-                <li><a href="{{route('anfahrt')}}">Anfahrt & Kontakt</a></li>
+                <li><a href="{{route('anfahrt')}}">Kontakt</a></li>
                 <li class="dropdown"><a><span>Interessantes</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{route('infoflyer')}}">Infoflyer</a></li>

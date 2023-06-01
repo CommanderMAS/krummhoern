@@ -33,8 +33,6 @@ return new class extends Migration
 
       <p>Gemäß § 33 der Satzung der Deichacht Krummhörn haben die Mitglieder der Deichacht die Beiträge zu leisten, die zur Erfüllung ihrer Aufgaben und Verbindlichkeiten und zu einer ordnungsgemäßen Haushaltsführung erforderlich sind.<br><br>Gemäß § 34 der Satzung verteilt sich die Beitragslast auf die beitragspflichtigen Mitglieder im Verhältnis der Vorteile, die sie von der Durchführung der Aufgaben der Deichacht haben und der Lasten, die die Deichacht auf sich nimmt, um die Deichunterhaltung entsprechend dem Nieders. Deichgesetz (NDG) durchzuführen (Vorteilsprinzip). Auf der Grundlage dieses Vorteilsprinzips verteilt sich die Beitragslast auf die Mitglieder im Verhältnis der geschützten Werte entsprechend dem Einheits- bzw. Ersatzwert.<br><br>Zusätzlich zahlt jedes Mitglied für jede ihm zuzurechnende wirtschaftliche Einheit einen Grundbetrag von 2,55 Euro zur Abgeltung des Verwaltungsaufwandes, der für die Führung des Mitgliedsverzeichnisses, Beitragsbuches und für die Hebung erforderlich ist.<br>Der Beitragssatz beträgt aktuell 0,4‰ jährlich vom Einheits- bzw. Ersatzwert zzgl. des Grundbetrages von 2,55 Euro. Der Beitragssatz wird jährlich vom Ausschuss der Deichacht Krummhörn festgesetzt und ist seit dem Jahr 1986 unverändert.<br><br>Beispiel: Einfamilienhaus hat einen Einheitswert (Finanzamt) von 30.000 Euro.<br>Damit beträgt der jährlich zu zahlende Beitrag 14,55 Euro.<br>(30.000 Euro x 0,4‰ = 12,00 Euro zzgl. 2,55 Euro Grundbetrag)</p>
 
-	<p>Hier die <a href="{{asset(\'/downloads/Abbuchungsvollmacht.pdf\')}}" target="_blank">Abbuchungsvollmacht</a> herunterladen</p>
-
 </div>
 
 
@@ -43,26 +41,20 @@ return new class extends Migration
 
       <h1>Informationen zur Datenerhebung</h1>
 
-
       <p><strong>gem. Art. 13 u. 14 DSGVO</strong></p>
-<p>&nbsp;</p>
 <p>Im Folgenden informieren wir Sie über den Umgang mit Ihren persönlichen Daten und über die Rechte, die Ihnen im Hinblick auf die Verwendung der Daten uns gegenüber zustehen.</p>
-<p>&nbsp;</p>
 <p><strong>Verantwortlicher für die Datenverarbeitung</strong></p>
 <p>Deichacht Krummhörn</p>
 <p>Jannes-Ohling-Straße 23</p>
 <p>26736 Krummhörn</p>
 <p>Tel.: 0 49 23 – 91 11 0</p>
 <p>E-Mail: <a href="mailto:verwaltung@deichacht-krummhoern.de">verwaltung(a)deichacht-krummhoern.de</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <p><strong>Datenschutzbeauftragter</strong></p>
 <p>TOP Datenschutz GmbH &amp; Co. KG</p>
 <p>Wiekesch 1</p>
 <p>26689 Apen</p>
 <p>Tel.: 04488-529142</p>
 <p>E-Mail: <a href="mailto:info@top-datenschutz.de">info(a)top-datenschutz.de</a></p>
-<p>&nbsp;</p>
 <p><strong>Zweck und rechtliche Grundlage der Datenverarbeitung</strong></p>
 <p>Wir verarbeiten folgende Daten zum Zweck der öffentlich-rechtlichen Aufgabenerfüllung unseres Verbandes auf Grundlage Art. 6 DSGVO. Die Daten beziehen sich auf die Mitgliedschaft (einschließlich Beitragshebeverfahren) und vertragliche Bindungen in Zusammenhang mit der Aufgabenerfüllung unseres Verbandes (Satzung).</p>
 <p>In der Regel handelt es sich hierbei um folgende Daten:</p>
@@ -133,6 +125,55 @@ return new class extends Migration
                                                 31.12.2024, am 31.12.2026 und am 31.12.2028.<br>Die Aufgaben des
                                                 Ausschusses bestimmen sich nach § 11 der Satzung der
                                                 Deichacht.<br><br>';
+        $data->save();
+
+        $data = new Config([]);
+        $data->option = 'hundeamdeich';
+        $data->value = '<h1>Hunde am Deich</h1><br/><br/>
+
+Wir möchten Sie darauf hinweisen, dass an den gesamten Deichen das Mitführen von Hunden gemäß Nieders. Deichgesetz verboten ist. In der Vergangenheit ist es leider immer wieder vorgekommen, dass Schafe durch freilaufende Hunde gehetzt wurden und dadurch starben. Weiterhin können durch hinterlassenen Kot der Hunde Krankheitserreger übertragen werden.<br/><br/>
+
+Einige Bereiche (Campener Leuchtturm bis Campingplatz Upleward, alter Deich in Greetsiel) sind in Absprache mit den Schäfereien für das Mitführen von Hunden (ANGELEINT) freigegeben. Den Weisungen der Schäfer und der Deichachtsbediensteten ist unbedingt Folge zu leisten. <br/><br/>
+
+Vielen Dank für Ihr Verständnis.
+';
+        $data->save();
+
+        $data = new Config([]);
+        $data->option = 'anfahrt';
+        $data->value = '
+Die Verwaltung der Deichacht Krummhörn hat ihren Sitz in der Ortschaft Pewsum (Gemeinde Krummhörn) in der Jannes-Ohling-Straße 23.<br/><br/>
+
+<h4>Folgende Mitarbeiter der Deichacht Krummhörn stehen Ihnen gerne für sämtliche Anfragen, Anregungen und Wünsche während der Bürozeiten zur Verfügung:</h4><br/><br/>
+
+<h4>Geschäftsführer/Rendant: Frank Rosenberg</h4><br/>
+Tel.: 0 49 23/91 11-11<br/>
+Mobil: 01 73 / 86 11 99 6<br/>
+nach Dienstschluss: Tel.: 0 49 23/80 57 55<br/>
+E-Mail: rosenberg(a)deichacht-krummhoern.de<br/><br/>
+
+<h4>Beitragswesen/Buchhaltung: Herta Hoogestraat</h4><br/>
+Tel.: 0 49 23/91 11-12<br/>
+E-Mail: hoogestraat(a)deichacht-krummhoern.de<br/><br/>
+
+<h4>Beitragswesen/Buchhaltung: Ilona Popp</h4><br/>
+Tel.: 0 49 23/91 11-13<br/>
+E-Mail: popp(a)deichacht-krummhoern.de<br/><br/>
+
+<h4>Deichaufseher: Dieter Carsjens</h4><br/>
+Tel.: 0 49 23/91 11-22<br/>
+Mobil: 01 77/33 97 77 4<br/>
+E-Mail: carsjens(a)deichacht-krummhoern.de<br/><br/>
+
+<h4>Das Verbandsbüro ist wie folgt geöffnet:</h4><br/>
+Montag bis Donnerstag von 07.30 Uhr bis 13.00 Uhr und von 14.00 Uhr bis 16.00 Uhr<br/>
+Freitag von 07.30 Uhr bis 13.00 Uhr<br/><br/>
+
+Der Bauhof der Deichacht Krummhörn befindet sich ebenfalls in der Ortschaft Pewsum (Gemeinde Krummhörn) in der Jannes-Ohling-Straße 23. Aktuell sind bei der Deichacht Krummhörn 8 Deichunterhaltungsarbeiter beschäftigt.<br/>
+
+Die Deichunterhaltungsmitarbeiter erledigen alle anfallenden Arbeiten zum überwiegenden Teil in Eigenregie. Nur in den seltensten Fällen (z.B. bei der Futterwerbung und der Teekentsorgung) kommen Fremdfirmen unterstützend zum Einsatz.
+
+';
         $data->save();
 
 
@@ -459,29 +500,16 @@ Die Aufgaben des Vorstandes bestimmen sich nach § 19 der Satzung der Deichacht.
         $data->value = '<h1>Aufgaben</h1>
 
                             <div class="warpper  last">
-                                Die Deichacht Krummhörn wurde gemäß § 7 des Niedersächsischen Deichgesetzes (NDG) am
-                                01.03.1963
-                                gegründet. Die Deichacht ist ein Wasser- und Bodenverband im Sinne des
-                                Wasserverbandsgesetzes und dient
-                                dem öffentlichen Interesse (Körperschaft des öffentlichen Rechts) und dem Nutzen ihrer
-                                Mitglieder. Die
-                                Deichacht verwaltet sich im Rahmen der Gesetze selbst (Selbstverwaltung). Die Deichacht
-                                steht unter der
-                                Rechtsaufsicht des Landkreises Aurich und der kreisfreien Stadt Emden.<br>Gemäß § 2 der
-                                Satzung hat
-                                die Deichacht folgende Aufgabe:<br>Die Deichacht hat zur Aufgabe, ihr Verbandsgebiet (§
-                                1, Abs. 4)
-                                vor Sturmfluten zu schützen. Dafür hat sie die erforderlichen Deiche einschließlich der
-                                dazugehörigen
-                                Anlagen zu bauen, sowie ihre Deiche in ihrem Bestand und in ihren vorgeschriebenen
-                                Abmessungen zu
-                                erhalten. Dazu gehört auch die Erhaltung des Deichvorlandes (NDG). Weiter hat sie die
-                                zur Erhaltung
-                                eines ordnungsgemäßen Zustandes erforderlichen Arbeiten an den übrigen Verbandsanlagen
-                                vorzunehmen und
-                                die Deichsicherheit von Schleusen, Sielen und anderen Bauwerken im Deich, die in der
-                                Unterhaltungslast
-                                anderer stehen, zu überwachen und die Vorsorge für die Deichverteidigung zu treffen.<br><strong><br>Weitere
+
+                                Die Deichacht Krummhörn wurde gemäß § 7 des Niedersächsischen Deichgesetzes (NDG) am 01.03.1963 gegründet. Die Deichacht ist ein Wasser- und Bodenverband im Sinne des Wasserverbandsgesetzes und dient dem öffentlichen Interesse (Körperschaft des öffentlichen Rechts) und dem Nutzen ihrer Mitglieder. Die Deichacht verwaltet sich im Rahmen der Gesetze selbst (Selbstverwaltung). Die Deichacht steht unter der Rechtsaufsicht des Landkreises Aurich und der kreisfreien Stadt Emden.<br/><br/>
+
+Gemäß § 2 der Satzung hat die Deichacht folgende Aufgabe:<br/><br/>
+
+Die Deichacht hat zur Aufgabe, ihr Verbandsgebiet (§ 1, Abs. 4) vor Sturmfluten zu schützen. Dafür hat sie die erforderlichen Deiche einschließlich der dazugehörigen Anlagen zu bauen, sowie ihre Deiche in ihrem Bestand und in ihren vorgeschriebenen Abmessungen zu erhalten. Dazu gehört auch die Erhaltung des Deichvorlandes (NDG). Weiter hat sie die zur Erhaltung eines ordnungsgemäßen Zustandes erforderlichen Arbeiten an den übrigen Verbandsanlagen vorzunehmen und die Deichsicherheit von Schleusen, Sielen und anderen Bauwerken im Deich, die in der Unterhaltungslast anderer stehen, zu überwachen und die Vorsorge für die Deichverteidigung zu treffen.<br/><br/>
+Insgesamt hat die Deichacht Krummhörn aktuell (Stand: 2018) 42.000 Mitglieder.<br/>
+Im geschützten Gebiet (Verbandsgebiet) leben aktuell (Stand: 2018) ca. 135.000 Menschen.
+
+                                <br><strong><br>Weitere
                                     Informationen zu unseren Aufgaben:</strong>
                                 <br>Zur Erfüllung der o.g. Aufgaben unterhält die Deichacht in Krummhörn-Pewsum einen
                                 Bauhof. Hierzu
@@ -510,8 +538,8 @@ Die Aufgaben des Vorstandes bestimmen sich nach § 19 der Satzung der Deichacht.
                                                 geschlossene und feste
                                                 Grasnarbe gewährleistet.<br>Hierzu unterhält die Deichacht Krummhörn
                                                 entlang ihrer
-                                                Deichlinie insgesamt 3 Deichschäfereien. <br>Diese landwirtschaftlichen
-                                                Gebäude stehen
+                                                Deichlinie insgesamt 3 Deichschäfereien. <br>Diese landwirtschaftlichen<br/><br/>
+                                                Gebäude stehen<br/>
                                                 im Eigentum der Deichacht und <br/> sind an die Deichschäfer der
                                                 Deichacht Krummhörn inkl. der
                                                 dazugehörigen Deichstrecken verpachtet, und zwar:
@@ -581,10 +609,7 @@ Die Aufgaben des Vorstandes bestimmen sich nach § 19 der Satzung der Deichacht.
                                                 <img src="http://109.239.193.233/krummhoern/public/images/statisch/schafe.jpg" width="400"
                                                      alt="Schafe am Deich">
 
-                                            </div>
-
-
-                                        </div>';
+                                            </div>';
         $data->save();
 
         $data = new Config([]);

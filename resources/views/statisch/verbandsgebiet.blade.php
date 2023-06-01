@@ -16,6 +16,7 @@
 
                             <h1>Verbandsgebiet</h1>
 
+                            <p>Die Deichacht Krummhörn ist zuständig für den Bau und die Unterhaltung der Deiche und seiner Anlagen. Die zu schützende Deichlinie hat eine Länge von rd. 55 km und verläuft von Borssum (Stadt Emden) bis nach Leybuchtpolder (Stadt Norden). Das Verbandsgebiet der Deichacht Krummhörn hat eine Größe von rd. 48.000 ha und umfasst die Gemeinden Krummhörn und Hinte, sowie Großteile der Stadt Emden, der Gemeinden Brookmerland und Südbrookmerland. Außerdem gehören zum Verbandsgebiet Teile der Stadt Aurich, der Stadt Norden sowie der Gemeinde Ihlow.</p>
 
                             <div class="image_container float_above">
 

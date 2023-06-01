@@ -81,7 +81,11 @@ class FrontendController
 
     public function anfahrt()
     {
-        return view('statisch.anfahrt');
+        $input = 'anfahrt';
+        $content = Config::query()->where('option', $input)->first();
+
+        $content = $content->value;
+        return view('statisch.'.$input,['content'=>$content]);
     }
 
     public function aufgaben()
@@ -129,6 +133,15 @@ class FrontendController
     public function buchreihe()
     {
         $input = 'buchreihe';
+        $content = Config::query()->where('option', $input)->first();
+
+        $content = $content->value;
+        return view('statisch.'.$input,['content'=>$content]);
+    }
+
+    public function hundeamdeich()
+    {
+        $input = 'hundeamdeich';
         $content = Config::query()->where('option', $input)->first();
 
         $content = $content->value;

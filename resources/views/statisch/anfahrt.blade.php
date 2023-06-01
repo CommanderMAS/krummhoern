@@ -17,19 +17,11 @@
 
                                 <h1>Kontakt</h1>
 
+                                {!! $content !!}
 
-                                <p>&nbsp; &nbsp;</p>
-
-
-                            </div>
-
-                            <br><br>
-                            <div>
-                                Deichacht Krummhörn<br>
-                                Jannes-Ohling-Str. 23<br>
-                                26736 Krummhörn
 
                             </div>
+
                             <!--<table class="warpper" width="100%" border="0">
                                 <tbody>
                                 <tr>
