@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Models\News;
 use App\Models\Projekte;
 
 function date_german($date): string
@@ -9,12 +10,20 @@ function date_german($date): string
         return($datum);
     }
 
-    function count_projekte(): int
-    {
-        $today = today()->format('Y-m-d');
-        $projekte = Projekte::query()->where('date_to', '>=', $today)->orWhere('date_to',null)->where('active',1)->get();
-        return count($projekte);
-    }
+function count_projekte(): int
+{
+    $today = today()->format('Y-m-d');
+    $projekte = Projekte::query()->where('date_to', '>=', $today)->orWhere('date_to',null)->where('active',1)->get();
+    return count($projekte);
+}
+
+
+function count_aktuelles(): int
+{
+    $today = today()->format('Y-m-d');
+    $projekte = News::query()->where('date_to', '>=', $today)->orWhere('date_to',null)->where('active',1)->get();
+    return count($projekte);
+}
 
     function get_sliders():array
     {

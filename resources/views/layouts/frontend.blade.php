@@ -59,7 +59,9 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="active" href="{{route('aktuelles')}}">Aktuelles</a></li>
+                @if (count_aktuelles()>0)
+                    <li><a class="active" href="{{route('aktuelles')}}">Aktuelles</a></li>
+                @endif
                 <li class="dropdown"><a><span>Deichacht Krummhörn</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{route('organisation')}}">Organisation</a></li>
@@ -70,7 +72,7 @@
                     </ul>
                 </li>
                 @if (count_projekte()>0)
-                    <li><a href="{{route('projekte')}}">Projekte</a></li>
+                    <li><a href="{{route('projekte')}}">Deichbau</a></li>
                 @endif
                 <li><a href="{{route('beitraege')}}">Beiträge</a></li>
                 <li><a href="{{route('anfahrt')}}">Kontakt</a></li>
@@ -83,17 +85,22 @@
                 </li>
                 @auth
                     <a href="{{ url('/dashboard') }}"
-                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zum
-                        Bearbeitungsbereich</a>
+                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur Online-Datenpflege</a>
                 @else
                     <a href="{{ route('login') }}"
-                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
-                        in</a>
+                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur Online-Datenpflege</a>
 
                 @endauth
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
+
+        <div class="logo">
+            <h1 class="text-light"><img src="{{asset('assets/img/welle.jpg')}}"
+                                                                    alt="logo"></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
 
     </div>
 </header><!-- End Header -->

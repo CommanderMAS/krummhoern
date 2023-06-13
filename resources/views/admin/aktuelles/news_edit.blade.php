@@ -77,18 +77,6 @@
                     <div class="col-md-9"><input type="date" id="date_to" name="date_to" value="{{$news->date_to==null?"":$news->date_to}}" class="form-control"></div>
                 </div>
 
-                <div class="col-md-12 row form-group">
-                    <div class="col col-md-3"><label class=" form-control-label">Optionen</label></div>
-                    <div class="col col-md-9">
-                        <div class="form-check-inline form-check">
-                            <label for="inline-checkbox1" class="form-check-label ">
-                                <input type="checkbox" id="inline-checkbox1" name="topnews" value="option1"
-                                       class="form-check-input" {{$news->topnews==1?"checked":""}}>Topnews
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
 
                 <div class="col-md-12 row form-group float-right">
                     <button type="submit" class="btn btn-primary btn-sm">

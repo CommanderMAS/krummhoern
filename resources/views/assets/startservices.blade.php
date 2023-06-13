@@ -55,6 +55,10 @@
                     <div class="icon"><i class="bi bi-patch-exclamation"></i></div>
                     <h4 class="title">Hunde am Deich</h4>
                     <p class="description">Hier finden sie die aktuellen Regelungen für Hunde am Deich</p>
+                    <a
+                            title="Deichacht Infoflyer" href="{{asset('/downloads/InfoFlyer.pdf')}}"
+                            target="_blank">Download
+                            des Touristik-Flyers</a></p>
                 </div>
                 </a>
             </div>

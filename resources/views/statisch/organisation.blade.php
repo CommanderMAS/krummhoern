@@ -9,9 +9,9 @@
 
                 <div class="col-lg-12">
 
-                    <article class="entry entry-single">
+                    <article class="entry">
 
-                        <div class="">
+                        <div class="overflow-x-scroll">
 
                             <h1>Organisation</h1>
 
@@ -27,11 +27,11 @@
                         <div class="warpper">
                             <input class="radio" id="one" name="group" type="radio" checked>
                             <input class="radio" id="two" name="group" type="radio">
-                            <input class="radio" id="three" name="group" type="radio">
+                            <input class="radio" id="three" name="group" type="radio" hidden>
                             <div class="tabs">
                                 <label class="tab" id="one-tab" for="one">Ausschuss</label>
                                 <label class="tab" id="two-tab" for="two">Vorstand</label>
-                                <label class="tab" id="three-tab" for="three">Verwaltung</label>
+                                <label class="tab" id="three-tab" for="three" hidden>Verwaltung</label>
                             </div>
                             <div class="panels">
                                 <div class="panel" id="one-panel">
@@ -50,7 +50,7 @@
 
 
                                             <p>&nbsp;</p>
-                                            <table width="500">
+                                            <table width="95%">
                                                 <tbody>
                                                 <tr>
                                                     <td><strong>a) Bezirk 1:</strong></td>
@@ -73,7 +73,7 @@
 
 
                                             <p>&nbsp;</p>
-                                            <table width="500">
+                                            <table width="95%">
                                                 <tbody>
                                                 <tr>
                                                     <td><strong>b) Bezirk 2:</strong></td>
@@ -96,7 +96,7 @@
 
 
                                             <p><br><br></p>
-                                            <table width="520">
+                                            <table width="95%">
                                                 <tbody>
                                                 <tr>
                                                     <td><strong>c) Bezirk 3:</strong></td>

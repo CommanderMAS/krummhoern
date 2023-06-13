@@ -27,7 +27,7 @@
                             {{ __('Aktuelles') }}
                         </x-nav-link>
                         <x-nav-link :href="route('projekte_index')" :active="request()->routeIs('projekte_index')">
-                            {{ __('Projekte') }}
+                            {{ __('Deichbau') }}
                         </x-nav-link>
                         <x-nav-link :href="route('slider_index')" :active="request()->routeIs('slider_index')">
                             {{ __('Slider') }}

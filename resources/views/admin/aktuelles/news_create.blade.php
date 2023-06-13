@@ -75,20 +75,6 @@
                         </div>
                         <br/>
                         <br/>
-                        <br/>
-                        <br/>
-
-                        <div class="col-md-12 row form-group hidden">
-                            <div class="col "><label class=" form-control-label">Optionen</label></div>
-                            <div class="col col-md-9">
-                                <div class="form-check-inline form-check">
-                                    <label for="inline-checkbox1" class="form-check-label ">
-                                        <input type="checkbox" id="inline-checkbox1" name="topnews" value="option1"
-                                               class="form-check-input">Topnews
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="col-md-12 row form-group float-right">
                             <button type="submit" class="btn btn-info btn-sm">
