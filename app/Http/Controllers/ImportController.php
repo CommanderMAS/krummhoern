@@ -89,7 +89,7 @@ class ImportController
             $importParts = explode(",",$import);
             $name = str_replace(["'", "("], "", $importParts[0]);
             $password = str_replace(["'", ")"], "", $importParts[1]);
-            $usertry = User::query()->where('email',Hash::make($password))->first();
+            $usertry = User::query()->where('email',$password)->first();
             if ($usertry === null)
             {
                 $user = new User();
