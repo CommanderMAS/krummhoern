@@ -36,13 +36,13 @@
                     <h3>Aktualisieren sie jetzt ihre Daten</h3>
                     <p>Loggen sie sich mit den ihnen zugeschickten Zugangsdaten ein und teilen sie uns wichtige Datenänderungen mit</p>
                 </div>
-                <div class="col-lg-3 cta-btn-container text-center">
+                <div class="col-lg-3 cta-btn align-middle cta-btn-container text-center">
                     @if (Route::has('login'))
                         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
                             @auth
-                                <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur Online-Datenpflege</a>
+                                <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 btn btn-outline-primary">Zur Online-Datenpflege</a>
                             @else
-                                <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur Online-Datenpflege</a>
+                                <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 btn btn-outline-primary">Zur Online-Datenpflege</a>
 
                                 @if (false)
                                     <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>

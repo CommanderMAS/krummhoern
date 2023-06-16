@@ -28,7 +28,6 @@ class userImport extends Command
      */
     public function handle(): void
     {
-        \Log::info("Cron is working fine!");
         $importController = new ImportController();
         $importController->import();
     }

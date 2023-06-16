@@ -55,8 +55,7 @@ class ImportController
 
 
         $saveFile = storage_path()."/import/save.txt";
-        file_put_contents($saveFile,"1");
-        $this->deleteOld();
+        file_put_contents($saveFile,"0");
 
         $message="Upload abgeschlossen - Import läuft";
         $messageColor='green';
@@ -72,8 +71,10 @@ class ImportController
         $saveFile = storage_path()."/import/save.txt";
         $saveFileContent = (int)file_get_contents($saveFile);
 
-        Log::info('Sind bei User: '.$saveFileContent);
-
+        if ($saveFileContent === 0){
+            $this->deleteOld();
+            file_put_contents($saveFile,"1");
+        }
         $fileContent = file_get_contents($filename);
 
         $fileArray = explode (PHP_EOL,$fileContent);
@@ -87,19 +88,22 @@ class ImportController
             }
             $importParts = explode(",",$import);
             $name = str_replace(["'", "("], "", $importParts[0]);
-            $usertry = User::query()->where('name',$name)->first();
+            $password = str_replace(["'", ")"], "", $importParts[1]);
+            $usertry = User::query()->where('email',Hash::make($password))->first();
             if ($usertry === null)
             {
                 $user = new User();
-                $user->name = $name;
-                $user->email = $name;
-                $password = str_replace(["'", ")"], "", $importParts[1]);
-                $user->password = Hash::make($password);
+                $user->name = '****-'.explode("-",$name)[1];
+                $user->email = $password;
+                $user->password = Hash::make($name);
                 $user->save();
+            } else {
+                Log::info('User: '.$name.' PW: '.$password.' ('.Hash::make($password). ') ist doppelt passwort: '.$usertry->password);
             }
             $saveFileContent++;
             file_put_contents($saveFile,$saveFileContent);
         }
+        Log::info('alles geklappt');
         unlink($filename);
     }
 
