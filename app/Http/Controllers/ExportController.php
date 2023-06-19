@@ -28,7 +28,6 @@ class ExportController
                 'Content-Type' => 'text/csv',
                 'Content-Disposition' => 'attachment; filename="test.csv"',
             );
-
             // our response, this will be equivalent to your download() but
             // without using a local file
             $callback = function () use ($exportData, $exportFields) {
@@ -37,22 +36,22 @@ class ExportController
 
                 foreach ($exportData as $task) {
                     $row['Mitglied-nr'] = $task['hebenummer'];
-                    $row['Name2'] = Crypt::decrypt($task['nachname']);
-                    $row['Name1'] = Crypt::decrypt($task['vorname']);
-                    $row['Strasse'] = utf8_decode(Crypt::decrypt($task['strasse']));
-                    $row['PLZ'] = Crypt::decrypt($task['plz']);
-                    $row['Ort'] = Crypt::decrypt($task['ort']);
-                    $row['Email'] = Crypt::decrypt($task['email']);
-                    $row['Einzug'] = Crypt::decrypt($task['einzug']);
+                    $row['Name2'] = ($task['nachname']=="null"?"":Crypt::decrypt($task['nachname']));
+                    $row['Name1'] = ($task['vorname']=="null"?"":Crypt::decrypt($task['vorname']));
+                    $row['Strasse'] = utf8_decode(($task['strasse']=="null"?"":Crypt::decrypt($task['strasse'])));
+                    $row['PLZ'] = ($task['plz']=="null"?"":Crypt::decrypt($task['plz']));
+                    $row['Ort'] = ($task['ort']=="null"?"":Crypt::decrypt($task['ort']));
+                    $row['Email'] = ($task['email']=="null"?"":Crypt::decrypt($task['email']));
+                    $row['Einzug'] = ($task['einzug']=="null"?"":Crypt::decrypt($task['einzug']));
                     $row['Bankname'] = '';
                     $row['BLZ'] = '';
                     $row['Konto'] = '';
-                    $row['Iban'] = Crypt::decrypt($task['iban']);
+                    $row['Iban'] = ($task['iban']=="null"?"":Crypt::decrypt($task['iban']));
                     $row['BIC'] = '';
-                    $row['Kontoinhaber'] = Crypt::decrypt($task['kontoinhaber']);
+                    $row['Kontoinhaber'] = ($task['kontoinhaber']=="null"?"":Crypt::decrypt($task['kontoinhaber']));
                     $row['Eingabe_Datum'] = date_create($task['created_at'])->format('d.m.Y');
                     $row['Verband'] = '';
-                    $row['Sonstiges'] = Crypt::decrypt($task['sonstiges']);
+                    $row['Sonstiges'] = ($task['sonstiges']=="null"?"":Crypt::decrypt($task['sonstiges']));
 
                     fputcsv($file, $row, ';');
                 }

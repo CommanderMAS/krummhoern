@@ -38,7 +38,7 @@
                                     <div class="mod_article first last block" id="ausschuss">
 
 
-                                        <div class="ce_text first block">
+                                        <div class="ce_text block">
 
 
                                             <p>{!! $data['ausschuss'] !!}</p>
@@ -46,11 +46,9 @@
 
                                         </div>
 
-                                        <div class="ce_text block">
+                                        <div class="">
 
-
-                                            <p>&nbsp;</p>
-                                            <table width="95%">
+                                            <table width="95%" style="min-width: 95%;">
                                                 <tbody>
                                                 <tr>
                                                     <td><strong>a) Bezirk 1:</strong></td>
@@ -62,19 +60,13 @@
                                                 </tr>
 
                                                 {!! $data['bezirk_1'] !!}
-                                                </tbody>
-                                            </table>
-                                            <p>&nbsp;</p>
+                                                <tr>
+                                                    <td colspan="2">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">&nbsp;</td>
+                                                </tr>
 
-
-                                        </div>
-
-                                        <div class="ce_text block">
-
-
-                                            <p>&nbsp;</p>
-                                            <table width="95%">
-                                                <tbody>
                                                 <tr>
                                                     <td><strong>b) Bezirk 2:</strong></td>
                                                     <td>&nbsp;</td>
@@ -85,19 +77,13 @@
                                                 </tr>
 
                                                 {!! $data['bezirk_2'] !!}
-                                                </tbody>
-                                            </table>
-                                            <p>&nbsp;</p>
+                                                <tr>
+                                                    <td colspan="2">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">&nbsp;</td>
+                                                </tr>
 
-
-                                        </div>
-
-                                        <div class="ce_text block">
-
-
-                                            <p><br><br></p>
-                                            <table width="95%">
-                                                <tbody>
                                                 <tr>
                                                     <td><strong>c) Bezirk 3:</strong></td>
                                                     <td><strong>&nbsp;</strong></td>

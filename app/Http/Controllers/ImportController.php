@@ -94,6 +94,7 @@ class ImportController
             {
                 $user = new User();
                 $user->name = '****-'.explode("-",$name)[1];
+                $user->login_attempts = explode("-",$name)[0];
                 $user->email = $password;
                 $user->password = Hash::make($name);
                 $user->save();

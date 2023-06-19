@@ -29,8 +29,9 @@ class ChangesController
             $changes->setAttribute($key,Crypt::encrypt($attributes[$key]));
 
         }
-        $changes->hebenummer = Auth::user()->name;
+        $changes->hebenummer = Auth::user()->login_attempts.str_replace("*","",Auth::user()->name);
         $changes->name = Auth::id();
+        //dd($changes);
         $changes->save();
         $dataMessage = User_Changes::query()->where('name',Auth::id())->orderByDesc('id')->first();
         if (!($dataMessage === false))

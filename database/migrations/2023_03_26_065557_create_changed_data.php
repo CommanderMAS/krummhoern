@@ -11,20 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
+
+        Schema::dropIfExists('changed_data');
         Schema::create('changed_data', function (Blueprint $table) {
             $table->id();
-            $table->char('hebenummer',25);
-            $table->char('name',255);
-            $table->char('vorname',255)->nullable()->default('null');
-            $table->char('nachname',255)->nullable()->default('null');
-            $table->char('email',255);
-            $table->char('strasse',255)->nullable()->default('null');
-            $table->char('plz',10)->nullable()->default('null');
-            $table->char('ort',100)->nullable()->default('null');
-            $table->char('iban',100)->nullable()->default('null');
-            $table->char('kontoinhaber',255)->nullable()->default('null');
-            $table->char('einzug',255)->nullable()->default('null');
-            $table->char('sonstiges',255)->nullable()->default('null');
+            $table->string('hebenummer',25);
+            $table->string('name',300);
+            $table->string('vorname',300)->nullable()->default('null');
+            $table->string('nachname',300)->nullable()->default('null');
+            $table->string('email',300);
+            $table->string('strasse',300)->nullable()->default('null');
+            $table->string('plz',300)->nullable()->default('null');
+            $table->string('ort',300)->nullable()->default('null');
+            $table->string('iban',300)->nullable()->default('null');
+            $table->string('kontoinhaber',300)->nullable()->default('null');
+            $table->string('einzug',300)->nullable()->default('null');
+            $table->string('sonstiges',300)->nullable()->default('null');
             $table->timestamps();
         });
     }

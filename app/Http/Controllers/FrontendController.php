@@ -119,10 +119,10 @@ class FrontendController
 
     public function beitraege()
     {
-        $beitrag = Config::query()->where('option', 'beitrag')->first();
-
-        $beitagValue = $beitrag->value;
-        return view('beitraege', ['beitrag' => $beitagValue]);
+        $beitrag['allgemeines']=Config::query()->where('option','beitrag_allgemeines')->value('value');
+        $beitrag['bescheid']=Config::query()->where('option','beitrag_bescheid')->value('value');
+        $beitrag['datenerhebung']=Config::query()->where('option','beitrag_datenerhebung')->value('value');
+        return view('beitraege', ['beitrag' => $beitrag]);
     }
 
     public function infoflyer()

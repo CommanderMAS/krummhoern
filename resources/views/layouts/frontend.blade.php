@@ -21,12 +21,12 @@
     <!-- Vendor CSS Files -->
     <link href="{{URL::asset('../resources/css/animate.min.css')}}" rel="stylesheet">
     <link href="{{URL::asset('../resources/css/aos.css')}}" rel="stylesheet">
-    <link href="{{URL::asset('../resources/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{URL::asset('../resources/css/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{URL::asset('../resources/css/boxicons.min.css')}}" rel="stylesheet">
     <link href="{{URL::asset('../resources/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{URL::asset('../resources/css/swiper-bundle.min.css')}}" rel="stylesheet">
     <link href="{{URL::asset('../resources/css/krummhoern.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('../resources/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{asset('../resources/css/style.css')}}" rel="stylesheet">
@@ -41,7 +41,8 @@
         <div class="contact-info d-flex align-items-center">
             <i class="bi bi-envelope align-items-center"><a
                     href="mailto:verwaltung@deichacht-krummhoern.de">verwaltung@deichacht-krummhoern.de</a></i>
-            <i class="bi bi-phone align-items-center ms-4"><a href="tel:+49492391110"><span>0 49 23 - 91 11 0</span></a> </i>
+            <i class="bi bi-phone align-items-center ms-4"><a href="tel:+49492391110"><span>0 49 23 - 91 11 0</span></a>
+            </i>
         </div>
     </div>
 </section>
@@ -51,8 +52,12 @@
     <div class="container d-flex justify-content-between">
 
         <div class="logo">
-            <h1 class="text-light"><a href="{{route('home')}}"><img src="{{asset('assets/img/logo.jpg')}}"
-                                                                    alt="logo"></a></h1>
+            <h1 class="text-light "><a href="{{route('home')}}">
+                    <img class="d-none d-sm-block" src="{{asset('assets/img/logo.jpg')}}"
+                         alt="logo">
+                    <img class="d-sm-none d-block " src="{{asset('assets/img/logo_mobil.jpg')}}"
+                         alt="logo">
+                </a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
@@ -85,10 +90,12 @@
                 </li>
                 @auth
                     <a href="{{ url('/dashboard') }}"
-                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur Online-Datenpflege</a>
+                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur
+                        Online-Datenpflege</a>
                 @else
                     <a href="{{ route('login') }}"
-                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur Online-Datenpflege</a>
+                       class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Zur
+                        Online-Datenpflege</a>
 
                 @endauth
             </ul>
@@ -96,8 +103,8 @@
         </nav><!-- .navbar -->
 
         <div class="logo">
-            <h1 class="text-light"><img src="{{asset('assets/img/welle.jpg')}}"
-                                                                    alt="logo"></h1>
+            <h1 class="text-light"><img class="d-none d-sm-block" src="{{asset('assets/img/welle.jpg')}}"
+                                        alt="logo"></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
