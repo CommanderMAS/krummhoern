@@ -56,9 +56,9 @@
                     <h4 class="title">Hunde am Deich</h4>
                     <p class="description">Hier finden sie die aktuellen Regelungen für Hunde am Deich</p>
                     <a
-                            title="Deichacht Infoflyer" href="{{asset('/downloads/InfoFlyer.pdf')}}"
+                            title="Deichacht Infoflyer" href="{{asset('/downloads/Hundeflyer.pdf')}}"
                             target="_blank">Download
-                            des Touristik-Flyers</a></p>
+                            des Flyers</a></p>
                 </div>
                 </a>
             </div>
