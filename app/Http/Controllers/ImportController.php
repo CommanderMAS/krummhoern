@@ -99,7 +99,7 @@ class ImportController
                 $user->password = Hash::make($name);
                 $user->save();
             } else {
-                Log::info('User: '.$name.' PW: '.$password.' ('.Hash::make($password). ') ist doppelt passwort: '.$usertry->password);
+                Log::info('User: '.$name.' PW: '.$password.' ('.$usertry->name. ') ist doppelt: '.$usertry->email);
             }
             $saveFileContent++;
             file_put_contents($saveFile,$saveFileContent);
