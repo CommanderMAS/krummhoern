@@ -43,7 +43,15 @@
                             <form method="POST" action="{{ url('/dashboard') }}" enctype='multipart/form-data'>
                                 @csrf
                                 @method('POST')
-
+                                <div>
+                                    <div>
+                                        <p>
+                                            Ich ermächtige die Deichacht Krummhörn (Gläubiger-Identifikationsnummer: DE83ZZZ00000313434) widerruflich die wiederkehrenden Zahlungen ab sofort von meinem Konto mittels Lastschrift einzuziehen.
+                                            Zugleich weise ich mein Kreditinstitut an, die von der Deichacht Krummhörn auf mein Konto gezogene Lastschriften einzulösen.
+                                        </p>
+                                        <br/>
+                                    </div>
+                                </div>
 
                                 <div>
                                     <div>
@@ -158,6 +166,16 @@
                                         <button type="submit" class="btn btn-info">
                                             <i class="fa fa-dot-circle-o"></i> Änderungen speichern
                                         </button>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <div>
+                                        <br/>
+                                        <p>
+                                            Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.
+                                        </p>
                                     </div>
                                 </div>
                             </form>
